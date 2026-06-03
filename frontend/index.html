@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuickCart</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+   <nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="wishlist.html">Wishlist ❤️</a>
+    <a href="orders.html">My Orders</a>
+
+    <span id="user-info"></span>
+</nav>
+ 
+    <h3 id="welcome"></h3>
+    
+    <!-- Heading -->
+    <h1>Welcome to QuickCart</h1>
+    <p>Your Smart Shopping Platform</p>
+
+    <input type="text" id="searchBox" placeholder="Search products">
+
+    <div id="suggestions"></div>
+    
+    <button onclick="searchProduct()">Search</button>
+
+    <!-- Products Section -->
+   <h2>Products</h2>
+
+<div class="categories">
+
+    <button onclick="filterProducts('All')">All</button>
+
+    <button onclick="filterProducts('Electronics')">
+        Electronics
+    </button>
+
+    <button onclick="filterProducts('Accessories')">
+        Accessories
+    </button>
+
+    <button onclick="filterProducts('Fashion')">
+        Fashion
+    </button>
+
+    <button onclick="filterProducts('Gaming')">
+        Gaming
+    </button>
+
+    <button onclick="filterProducts('Computers')">
+        Computers
+    </button>
+
+    <button onclick="filterProducts('Audio')">
+        Audio
+    </button>
+
+    <button onclick="filterProducts('Smart Devices')">
+        Smart Devices
+    </button>
+
+     <button onclick="filterProducts('Groceries')">
+        Groceries
+    </button>
+
+</div>
+
+<div id="product-list"></div>
+
+<h2>Recommended Products</h2>
+
+<div id="recommendedProducts" class="product-container"></div>
+
+
+    <h2>Your Cart</h2>
+    <div id="cart"></div>
+
+    <h2>🤖 AI Shopping Assistant</h2>
+
+<div id="chatbox"
+     style="border:1px solid black;
+            height:200px;
+            overflow-y:scroll;
+            padding:10px;">
+</div>
+
+<input
+    type="text"
+    id="userMessage"
+    placeholder="Ask me about products..."
+>
+
+<button onclick="sendMessage()">
+    Send
+</button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+   <button onclick="placeOrder()">Place Order</button>
+
+</body>
+</html>

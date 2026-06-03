@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+
+<h1>Admin Panel</h1>
+
+<input id="pname" placeholder="Product Name"><br><br>
+
+<input id="pprice" placeholder="Price"><br><br>
+
+<input id="pimage" placeholder="Image URL"><br><br>
+
+<input id="pcategory" placeholder="Category"><br><br>
+
+<button onclick="generateDescription()">
+   Generate AI Description
+</button>
+
+<br><br>
+
+<textarea
+   id="description"
+   rows="4"
+   cols="50"
+   placeholder="AI Generated Description">
+</textarea>
+
+<br><br>
+
+<button onclick="addProduct()">
+   Add Product
+</button>
+
+<button type="button" onclick="addProduct()">
+Add Product
+</button>
+
+<h2>All Products</h2>
+<div id="admin-product-list"></div>
+
+<script>
+    if (localStorage.getItem("adminLoggedIn") !== "true") {
+        window.location.href = "adminlogin.html";
+    }
+</script>
+
+<script src="script.js"></script>
+<button onclick="adminLogout()">Logout</button>
+</body>
+</html>
